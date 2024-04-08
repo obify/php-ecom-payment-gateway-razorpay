@@ -17,6 +17,7 @@ include('config.php');
 <div class="container mt-3">
 <div class="row">
     <h2 class="text-center mb-5">Enter your details</h2>
+    <input type="hidden" id="rzpId" value="<?php echo $rzp_key;?>" />
 <?php 
 $course_id = $_GET["id"];
 $sql="select * from courses where id = ".$course_id;
@@ -89,7 +90,7 @@ var productname=$(this).attr('data-productname');
 var customerName=$("#custName").val();	
 
 var options = {
-    "key": "rzp_test_c9TEng0ws6BMLC", // Enter the Key ID generated from the Dashboard
+    "key": $("#rzpId").val(), // Enter the Key ID generated from the Dashboard
     "amount": amount*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "name": "RP TEST APP",
     "description": productname,

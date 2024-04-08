@@ -17,9 +17,10 @@ session_start();
 <div class="container mt-3">
   <h2>Payment has been successful</h2>
   <div class="alert alert-success">
-    <strong>Congratulations <?php echo $_SESSION['customerName'];?> Your Order for Product </strong><?php echo $_SESSION['productname'];?> 
-    <strong>has been successfully placed!</strong>
-    <strong>Please note your payment id!</strong><?php echo $_SESSION['paymentid'];?> 
+    <strong>Congratulations <?php echo $_SESSION['customerName'];?><br> 
+    Your Order for Product </strong><?php echo $_SESSION['productname'];?> 
+    <strong>has been successfully placed! <br> Please check your email for details.</strong>
+    <strong>Please note your payment id: </strong><?php echo $_SESSION['paymentid'];?> 
   </div>
   <a href="<?php echo $base_url;?>">Browse Products</a>
 </div>
